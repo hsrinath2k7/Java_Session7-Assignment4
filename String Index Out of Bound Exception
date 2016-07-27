@@ -1,0 +1,51 @@
+package Session7;
+
+import java.util.Scanner;
+
+public class StringExcepHandl {
+	
+	public static void main(String[] args)
+	{
+		
+		Scanner read = new Scanner(System.in);
+		
+		System.out.print("Enter words: ");
+		
+		String str = read.next();
+		
+		System.out.print("Enter a value to locate the letter: ");
+		
+		Scanner nr = new Scanner(System.in);
+		int n = nr.nextInt();
+		
+		try{
+		
+		char ch = str.charAt(n);
+		
+		System.out.println("The character is: " + ch );
+		
+		}catch(StringIndexOutOfBoundsException s){
+			
+			System.out.println("Out of Index Error");
+		}
+		
+		
+		System.out.println("Program Ends!!!!!");
+		
+		
+	}
+	
+
+
+}
+
+
+/* Output
+
+Enter words: Welcome
+Enter a value to locate the letter: 7
+Out of Index Error
+Program Ends!!!!!
+
+
+*/
